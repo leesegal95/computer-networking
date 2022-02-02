@@ -108,7 +108,7 @@
 * geostationary satellites
 * low-earth orbiting (LEO) satellites 
 
-### The Network Core
+## 1.3 The Network Core
 
 #### Packet Switching 
 * Packets: smaller chunks of data that are being sent to a destination end system 
