@@ -42,7 +42,7 @@
     - servers often sit in the data centers 
 
 - access networks, physical media -> part of the network edge structure 
-    - wired / warless communication links 
+    - wired / wireless communication links 
     - starling 
 
 - Access networks and physical media:
@@ -216,7 +216,7 @@ enterprise networks:
 
 - interconnected routers , networks of networks 
 - core responsibility is to pick up the packet as fast as it can and move it to another router as fast as it can
-- destination based routing -> inside thee core -> figure out where you are going and forward that way 
+- destination based routing -> inside the core -> figure out where you are going and forward that way 
 
 ### Packet Switching 
 * Packets: smaller chunks of data that are being sent to a destination end system 
@@ -230,7 +230,7 @@ enterprise networks:
         - R -> transmission rate bits/sec 
 - Host: sends packets of data 
     - host sending function:
-        - takes app message -> breaks into smaller chunks knows a *packets*, of length of L bits 
+        - takes app message -> breaks into smaller chunks known as *packets*, of length of L bits 
     - transmits the packet into access network at transmission rate of R 
         link transmission rate -> link capacity -> link bandwidth 
 * Packet transmission delay: time needed to transmit L bits packet into the link 
@@ -298,7 +298,7 @@ enterprise networks:
     - when the network establishes the circuit it also reserves a constant transmission rate in the networks links for the duration of the connection 
     - since the transmission rate is reserved you have a guaranteed constant rate
 - dedicated resources: no sharing 
-    - circuit like gauranteed performance 
+    - circuit like guaranteed performance 
 
 
 #### Multiplexing in Circuit-Switched Networks -> modulation technologies 
@@ -349,7 +349,7 @@ Proponents of packet switching:
     - residential, enterprise (company, university, commercial) ISPs
 - Access ISPs in turn must be interconnected
     - so that any two hosts can send packets to each other
-- Resulting network of networks is ery complex
+- Resulting network of networks is very complex
     - evolution was driven by economics and national policies 
 
 - large number of global ISP that are interconnected to each other 
@@ -385,7 +385,7 @@ Delays packet suffer from several types of delay at each node:
         - length of queuing delay depends on the number of earlier-arriving packets that are queued and waiting to be transmitted onto the link 
 
     * transmission delay
-        * L/R -> the time it takes to push (transmit) all of the pakcetds bits into the link 
+        * L/R -> the time it takes to push (transmit) all of the packets bits into the link 
         - typically microseconds to miliseconds  
 
     * propagation delay 
@@ -416,7 +416,7 @@ Delays packet suffer from several types of delay at each node:
 
 * Protocol stack: protocols of the various layers
 
-* Protocol: responsible for defining the format, order of messzge sent and received among network entities and actions taken on msg transmission, receipt 
+* Protocol: responsible for defining the format, order of messages sent and received among network entities and actions taken on msg transmission, receipt 
 
 #### Application Layer 
 

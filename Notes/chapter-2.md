@@ -293,7 +293,7 @@ An app layer protocol defines:
 
 #### User Interaction: Cookies
 
-- HTTP GET/response interaction is statless -> once TCP connection is closed nothing is saved for remebered 
+- HTTP GET/response interaction is statless -> once TCP connection is closed nothing is saved  
 * Cookies: allow sites to keep track of users, allows us to maintain information from the previous session, creates a record that corresponds back to a users computer and browser 
     - cookie are in the original browser thats used 
     - use to maintain a state of the connection
@@ -356,12 +356,12 @@ server: response contains no object if cached copy is up-to-date
 * Head of Line (HOL) blocking: when the earlier objects on the HTML base page are bigger and take longer to render then the rest of the objects on the page -> causes a delay since its one TCP connection link
     - resolution: open parallel TCP connection so that the smaller objects can render and not be delayed by the bigger object 
     - HTTP/1.1 can open up to 6 parallel TCP connection -> this helps circumvent HOL blocking and to obtain more bandwidth 
-- Primary goal of HTTP/2 p> get rid of or reduce the number of parallel TCP connections for transporting a single Web page 
-    - this will help reduce the number of sockets that need to be open nd maintained at servers but also allows TCP congestion control to operate as intended 
+- Primary goal of HTTP/2 -> reduce the number of parallel TCP connections for transporting a single Web page 
+    - this will help reduce the number of sockets that need to be open and maintained at servers but also allows TCP congestion control to operate as intended 
 
 #### HTTP 2 Framing 
 - HTTP/2 solution for HOL blocking is to break each message into small frames and interleave the request and response massages on the same TCP connection 
-- Most important enhancement of HTTP/2 is the ability to to break down an HTTP message into independent grames, interleave them, and then reassemble them on the other end 
+- Most important enhancement of HTTP/2 is the ability to to break down an HTTP message into independent frames, interleave them, and then reassemble them on the other end 
 - framing is down in a sub-layer of the HTTP/2 protocol 
 
 ### 2.3 Electronic Mail in the Internet 
@@ -401,10 +401,10 @@ mail servers:
 #### email
 - uses TCP to reliably transfer email message from client to server over port 25 or the secure mail port 465
 #### Mail access protocols 
-- mail access protocol: retrieval from erver 
+- mail access protocol: retrieval from server 
 - Use mail servers to obtain all the emails and that why a users computer does not have to stay "always on" waiting for a message
 - A user sends the message to their mail server either through SMTP or HTTP and then from her mail server uses SMTP to relay the email message to the other users mail serer ( the desired receiver of the message) -> this makes it so the user agent doesnt need to deal with an unreachable destination if the desired receiver computer is offline
-- How does a user running a user agent on their local hist obtain their messages that are sitting in a mail server?
+- How does a user running a user agent on their local host obtain their messages that are sitting in a mail server?
    Note: Cant use SMTP to obtain messages because obtaining the messages is a pull operation and SMTP is a push protocol
    Two commons ways to retrieve the emails from the mail server:
     1) if it is a web based email or smartphone app (i.e gmail) then the user agent will use HTTP to retrieve the users email
@@ -493,7 +493,7 @@ Example of how a DNS client wants to determine the IP address for the hostname w
         - man-in-middle
             * intercept DNS queries
         - DNS poisoning
-            * sending bogus relies to DNS server, which caches
+            * sending bogus replies to DNS server, which caches
     - Exploit DNS for DDos
         - send queries with spoofed source address: target IP
         - requires amplification 
@@ -518,3 +518,5 @@ Example of how a DNS client wants to determine the IP address for the hostname w
 - peers request service from other peers, provide service in return to others
     - self scalability: new peers bring new service capacity, and new service demands
 - bittorrent, distributing code, etc 
+
+- Content Distribution Networks (CDN's) -> all major video-streaming companies make us of CDNS to help resolve the challenge of distributing massive amount of video data to users distributed around the world 
